@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_activity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:contentDescription="Brasão da Prefeitura de Alegrete"
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/salvarLogin"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/salvarLogin"
+                android:layout_marginTop="14dp"
+                app:srcCompat="@drawable/brasao_alegrete" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/buttonPesquisar"
+                android:layout_alignRight="@+id/buttonPesquisar"
+                android:layout_below="@+id/textView"
+                android:text="Consulta de Processos"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textView2"
+                android:layout_alignRight="@+id/textView2"
+                android:layout_below="@+id/textView2"
+                android:text="Preencha todos os campos abaixo:" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayoutNumProcesso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Número do Processo"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayoutCPFouCNPJ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textInputLayoutNumProcesso"
+                android:layout_marginTop="19dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/editCPFouCNPJ"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:hint="CPF ou CNPJ"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/buttonPesquisar"
+                android:layout_width="340dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/salvarLogin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:onClick="buscarProcesso"
+                android:text="Consultar"
+                android:textColor="@color/colorTextIcon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <CheckBox
+                android:id="@+id/salvarLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/buttonPesquisar"
+                android:layout_alignStart="@+id/buttonPesquisar"
+                android:layout_below="@+id/textInputLayoutCPFouCNPJ"
+                android:layout_marginTop="13dp"
+                android:text="Salvar dados" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textView2"
+                android:layout_alignRight="@+id/textView2"
+                android:layout_alignTop="@+id/imageView8"
+                android:layout_marginTop="27dp"
+                android:text="Prefeitura de Alegrete"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:contentDescription="Ícone informação"
+                android:id="@+id/infoo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:onClick="informacoes"
+                app:srcCompat="@drawable/ic_info"
+                android:layout_below="@+id/buttonPesquisar"
+                android:layout_alignRight="@+id/buttonPesquisar"
+                android:layout_alignEnd="@+id/buttonPesquisar" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>

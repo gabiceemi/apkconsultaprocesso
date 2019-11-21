@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:elevation="0dp"
+    android:focusable="false">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/dataAndamento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="Data andamento"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/departamentoAndamento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/dataAndamento"
+            android:layout_alignStart="@+id/dataAndamento"
+            android:layout_below="@+id/dataAndamento"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:text="Departamento"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dataAndamento" />
+
+    <TextView
+        android:id="@+id/verMais"
+        android:layout_width="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5sp"
+        android:paddingRight="10sp"
+        android:text="ver mais"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/dataAndamento"
+        android:layout_marginRight="4dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

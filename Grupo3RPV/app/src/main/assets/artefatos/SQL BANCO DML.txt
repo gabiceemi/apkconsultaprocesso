@@ -1,0 +1,74 @@
+INSERT INTO `Tipo` VALUES (1,'Anuênio'), 
+(2,'Biênio'), 
+(3,'Triênio'), 
+(4,'Quadriênio'),
+(5,'Quinquênio'),
+(6,'Sexênio'), 
+(7,'Septênio'), 
+(8,'Octênio'), 
+(9,'Novênio'), 
+(10,'Decênio');
+
+INSERT INTO `Funcionario` VALUES (1,'Letícia Ana Lima'), 
+(2,'Nathan Miguel Pereira'), 
+(3,'Kevin Iago dos Santos'), 
+(4,'Levi Alexandre Lucca Almeida'), 
+(5,'Isabella Ester da Silva');
+
+
+INSERT INTO `Departamento` VALUES (1,'Secretaria de Administração'), 
+(2,'Secretaria de Fazenda'), 
+(3,'Secretaria de Obras e Serviços Urbanos');
+
+
+INSERT INTO `Cidadao` VALUES (1,'Breno Heitor Enzo Fernandes','41921590157'), 
+(2,'Augusto Giovanni Martins','95869558263'), 
+(3,'Lorena Valentina de Paula','15722002194'), 
+(4,'Valentina Mariane Luna','41766785506'), 
+(5,'Mariane Bárbara Rocha','47200302465'), 
+(6,'Rayssa Larissa Maria Costa','47237670026'), 
+(7,'Otávio Elias Pietro Monteiro','27339838490'), 
+(8,'Yuri Antonio Diogo Campos','14502408018'), 
+(9,'Vitor Pedro Samuel Moura','59715261540'), 
+(10,'Lavínia Marina dos Santos','12691560554');
+
+
+INSERT INTO `Processo` VALUES (1,'30/02/2016','obsobsobs','20:48',2,1,5,1), 
+(2,'25/07/2015','obsobsobs obsobsobs','08:30',3,2,3,3), 
+(3,'12/04/2014','obsobs','10:00',4,3,1,5);
+
+
+
+INSERT INTO `Andamento` VALUES (1,'30/02/2016','Abertura do Processo','Indefinido',1,1), 
+(2,'25/07/2015','Abertura do Processo','Indefinido',2,2), 
+(3,'12/04/2014','Abertura do Processo','Indefinido',3,3), 
+(4,'05/10/2016','Etapa 2','Indefinido',1,2), 
+(5,'21/08/2015','Etapa 2','Indefinido',2,3), 
+(6,'25/12/2014','Etapa 2','Indefinido',3,1), 
+(7,'12/12/2016','Etapa 3','Indefinido',1,2), 
+(8,'30/10/2015','Etapa 3','Indefinido',2,3);
+
+SELECT Processo._ID, Processo.dtProcesso, Processo.obsProcesso, Processo.horaProcesso, Tipo.nomeTipo, Funcionario.nomeFuncionario, requerente.nomeCidadao, titular.nomeCidadao, Departamento.nomeDepartamento
+FROM PROCESSO
+INNER JOIN Tipo
+ON Processo.idTipo = Tipo._ID
+INNER JOIN Funcionario 
+ON Processo.idFuncionario = Funcionario._ID
+INNER JOIN Cidadao as requerente
+ON Processo.idRequerente = requerente._ID
+INNER JOIN Cidadao as titular
+ON Processo.idTitular = titular._ID
+INNER JOIN Andamento 
+ON Processo._ID = Andamento.idProcesso
+INNER JOIN Departamento
+ON Andamento.idDepto = Departamento._ID
+WHERE Processo._ID = 1 [NUMERO CONTROLE]
+AND requerente.cpfOUcnpj = 41921590157 [CPF OU CNPJ]
+AND Processo.dtProcesso = Andamento.dtAndamento
+
+SELECT Andamento._ID, Andamento.idProcesso, Andamento.dtAndamento, Andamento.ocorrencia, Departamento.nomeDepartamento, Andamento.despachoProcesso 
+FROM Andamento
+INNER JOIN Departamento
+ON Andamento.idDepto = Departamento._ID
+WHERE Andamento.idProcesso = 1 [NUMERO CONTROLE]
+ORDER BY Andamento._ID ASC

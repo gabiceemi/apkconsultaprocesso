@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/firstDivider1"
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:background="@color/colorDivider"
+                android:layout_marginStart="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="22dp"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+            <ImageView
+                android:contentDescription="Ícone data"
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_protocolo"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Número de Controle do Processo:"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="26dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView"
+                android:layout_marginLeft="26dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/firstDivider1" />
+
+            <TextView
+                android:id="@+id/TextViewNumCP"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="18sp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintHorizontal_bias="1.0"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Número do Processo:"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="26dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView"
+                android:layout_marginLeft="26dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewNumCP" />
+
+            <TextView
+                android:id="@+id/TextViewNumProc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="18sp"
+                android:layout_marginStart="24dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintLeft_toRightOf="@+id/imageView"
+                android:layout_marginLeft="24dp"
+                android:layout_marginEnd="8dp" />
+
+            <View
+                android:id="@+id/firstDivider2"
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:background="@color/colorDivider"
+                android:layout_marginStart="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView2"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewNumProc"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+            <ImageView
+                android:contentDescription="Ícone data"
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_data"
+                android:layout_marginTop="6dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewNumProc"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Data:"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/firstDivider2"
+                app:layout_constraintLeft_toRightOf="@+id/imageView2"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+            <TextView
+                android:id="@+id/TextViewData"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView2"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Hora:"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewData"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView2"
+                android:layout_marginLeft="26dp" />
+
+            <TextView
+                android:id="@+id/TextViewHora"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView2"
+                android:layout_marginLeft="24dp" />
+
+            <View
+                android:id="@+id/firstDivider3"
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:background="@color/colorDivider"
+                android:layout_marginStart="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView3"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewHora"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+            <ImageView
+                android:contentDescription="Ícone hora"
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_tipo"
+                android:layout_marginTop="6dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewHora"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Tipo:"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/firstDivider3"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView3"
+                android:layout_marginLeft="26dp" />
+
+            <TextView
+                android:id="@+id/TextViewTipo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView3"
+                android:layout_marginLeft="24dp" />
+
+            <View
+                android:id="@+id/firstDivider4"
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:background="@color/colorDivider"
+                android:layout_marginStart="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView4"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewTipo"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+            <ImageView
+                android:contentDescription="Ícone cidadão"
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_cidadao"
+                android:layout_marginTop="6dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewTipo"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:text="Interessado:"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/firstDivider4"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView4"
+                android:layout_marginLeft="26dp" />
+
+            <TextView
+                android:id="@+id/TextViewNome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView15"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView4"
+                android:layout_marginLeft="24dp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Requerente:"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewNome"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView4"
+                android:layout_marginLeft="26dp" />
+
+            <TextView
+                android:id="@+id/TextViewRequerente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView16"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView4"
+                android:layout_marginLeft="24dp" />
+
+            <View
+                android:id="@+id/firstDivider5"
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:background="@color/colorDivider"
+                android:layout_marginStart="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView4"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewRequerente"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+            <ImageView
+                android:contentDescription="Ícone departamento"
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_departamento"
+                android:layout_marginTop="6dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewRequerente"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Departamento:"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="26dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView3"
+                android:layout_marginLeft="26dp"
+                app:layout_constraintHorizontal_bias="0.543"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/firstDivider5" />
+
+            <TextView
+                android:id="@+id/TextViewDepartamento"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="18sp"
+                android:layout_marginStart="24dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                app:layout_constraintLeft_toRightOf="@+id/imageView3"
+                android:layout_marginLeft="24dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Instituição:"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="26dp"
+                app:layout_constraintLeft_toRightOf="@+id/imageView3"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewDepartamento" />
+
+            <TextView
+                android:id="@+id/TextViewInstituicao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="18sp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView13"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView3"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintHorizontal_bias="0.528" />
+
+            <View
+                android:id="@+id/firstDivider6"
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:background="@color/colorDivider"
+                android:layout_marginStart="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView4"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewInstituicao"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+            <ImageView
+                android:contentDescription="Ícone funcionário"
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_funcionario"
+                android:layout_marginTop="6dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewInstituicao"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Atendente:"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="26dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView3"
+                android:layout_marginLeft="26dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/firstDivider6" />
+
+            <TextView
+                android:id="@+id/TextViewAtendente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="26dp"
+                android:layout_centerHorizontal="true"
+                app:layout_constraintLeft_toRightOf="@+id/imageView3"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+            <View
+                android:id="@+id/firstDivider7"
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:background="@color/colorDivider"
+                android:layout_marginStart="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView4"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewAtendente"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+            <ImageView
+                android:contentDescription="Ícone observação"
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_obs"
+                android:layout_marginTop="11dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewAtendente"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Observação:"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="26dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView2"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/firstDivider7" />
+
+            <TextView
+                android:id="@+id/TextViewObservacao"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:text="TextView"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                android:layout_marginStart="24dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView2"
+                android:layout_marginLeft="24dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="100dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+    </RelativeLayout>
+

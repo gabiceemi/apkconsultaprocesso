@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="apprpv.grupo3rpv.Controller.DetalhesAndamentoActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:contentDescription="Ícone data"
+            android:id="@+id/imgData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_data" />
+
+        <ImageView
+            android:contentDescription="Ícone departamento"
+            android:id="@+id/imgDepto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewData"
+            app:srcCompat="@drawable/ic_departamento" />
+
+        <ImageView
+            android:contentDescription="Ícone ocorrência"
+            android:id="@+id/imgOcorrencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDepartamento"
+            app:srcCompat="@drawable/ic_ocorrencia" />
+
+        <ImageView
+            android:contentDescription="Ícone despacho"
+            android:id="@+id/imgDespacho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOcorrencia"
+            app:srcCompat="@drawable/ic_despacho" />
+
+        <TextView
+            android:id="@+id/Data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="20dp"
+            android:text="Data:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/imgData"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/departamentoAndamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Departamento:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/imgDepto"
+            app:layout_constraintTop_toBottomOf="@+id/textViewData" />
+
+        <TextView
+            android:id="@+id/Ocorrencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Ocorrência:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/imgOcorrencia"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDepartamento" />
+
+        <TextView
+            android:id="@+id/Despacho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Despacho:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/imgDespacho"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOcorrencia" />
+
+        <TextView
+            android:id="@+id/textViewData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="tvData"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/imgData"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Data" />
+
+        <TextView
+            android:id="@+id/textViewDepartamento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="tvDepartamento"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@+id/imgDepto"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/departamentoAndamento" />
+
+        <TextView
+            android:id="@+id/textViewOcorrencia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="tvOcorrencia"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@+id/imgOcorrencia"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Ocorrencia" />
+
+        <TextView
+            android:id="@+id/tvDespacho"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="tvDespacho"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@+id/imgDespacho"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Despacho" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

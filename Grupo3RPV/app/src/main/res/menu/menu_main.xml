@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".Controller.AndamentoActivity">
+
+    <item
+        android:id="@+id/menuuu"
+        android:title=""
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/action_abrir"
+        android:title="Abrir extrato de andamentos"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/action_compartilhar"
+        android:title="Compartilhar extrato de andamentos"
+        app:showAsAction="ifRoom|withText"/>
+
+</menu>
+

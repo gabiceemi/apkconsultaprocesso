@@ -1,0 +1,25 @@
+CREATE TABLE Tipo (_ID INTEGER PRIMARY KEY AUTOINCREMENT, nomeTipo TEXT);
+
+
+CREATE TABLE Cidadao (_ID INTEGER PRIMARY KEY AUTOINCREMENT, nomeCidadao TEXT, cpfOUcnpj TEXT);
+
+
+CREATE TABLE Departamento (_ID INTEGER PRIMARY KEY AUTOINCREMENT, nomeDepartamento TEXT);
+
+
+CREATE TABLE Funcionario (_ID INTEGER PRIMARY KEY AUTOINCREMENT, nomeFuncionario TEXT);
+
+
+CREATE TABLE Processo (_ID INTEGER PRIMARY KEY AUTOINCREMENT, dtProcesso TEXT, obsProcesso TEXT, 
+horaProcesso TEXT, idTipo INTEGER, idFuncionario INTEGER, idTitular INTEGER, idRequerente INTEGER,  
+FOREIGN KEY(idTipo) REFERENCES Tipo(_ID),
+FOREIGN KEY(idFuncionario) REFERENCES Funcionario(_ID),
+FOREIGN KEY(idTitular) REFERENCES Cidadao(_ID),
+FOREIGN KEY(idRequerente) REFERENCES Cidadao(_ID));
+
+
+CREATE TABLE Andamento (_ID INTEGER PRIMARY KEY AUTOINCREMENT, dtAndamento TEXT, ocorrencia TEXT, despachoProcesso TEXT, 
+idProcesso INTEGER, idDepto INTEGER, 
+FOREIGN KEY(idProcesso) REFERENCES Processo (_ID), 
+FOREIGN KEY(idDepto) REFERENCES Departamento (_ID));
+
